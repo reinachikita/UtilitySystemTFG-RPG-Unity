@@ -9,10 +9,10 @@ using JetBrains.Annotations;
 public class ChatGPTManager : MonoBehaviour
 {
     //Data Auth
-    public string apiKey = "sk-proj-5YeeM1lOBNSYqCmm2iaKT3BlbkFJHb4KONZFHLPGcCauACoY";
+    public string apiKey = "YourApiKey";
     //Data Tunning Model
-    public static string CODE_MODEL_EGOIST = "ft:gpt-3.5-turbo-0125:personal:npc-selfish:9wSuhGgL";
-    public static string CODE_MODEL_SWEETY = "ft:gpt-3.5-turbo-0125:personal:npc-sweety:9yMe4qrI";
+    public static string CODE_MODEL_EGOIST = "ft:yourmodel1L";
+    public static string CODE_MODEL_SWEETY = "ft:yourmodel2";
     public static string CODE_MODEL_STANDARD = "ft:gpt-3.5-turbo-0125";
     public bool is_egoist;
     public bool is_standard;
@@ -53,8 +53,8 @@ public class ChatGPTManager : MonoBehaviour
         string realInputText = "";
         string realInputSystem = "";
             realInputText = inputText;
-        realInputSystem = $"La sinÛpsis de la historia presentada es: {currentSynopsis} " +
-            $" Tu ubicaciÛn: {location} " + $"Tu familia: {family} " + $"Tu trabajo: {work} " + $"Tu funcion es: {uniqueFunction}. Y tambien puedes responder a preguntas del contexto actual" + $"{additionalInfo} ";
+        realInputSystem = $"La sin√≥psis de la historia presentada es: {currentSynopsis} " +
+            $" Tu ubicaci√≥n: {location} " + $"Tu familia: {family} " + $"Tu trabajo: {work} " + $"Tu funcion es: {uniqueFunction}. Y tambien puedes responder a preguntas del contexto actual" + $"{additionalInfo} ";
 
         StartCoroutine(PostRequest(realInputText, realInputSystem));
     }
@@ -139,67 +139,67 @@ public class ChatGPTManager : MonoBehaviour
 /*
         * 
         *3. temperature
-Un valor entre 0 y 2 que determina la creatividad de la respuesta. Valores m·s bajos resultan en respuestas m·s deterministas.
+Un valor entre 0 y 2 que determina la creatividad de la respuesta. Valores m√°s bajos resultan en respuestas m√°s deterministas.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "temperature": 0.7
 4. max_tokens
-El n˙mero m·ximo de tokens a generar en la respuesta.
+El n√∫mero m√°ximo de tokens a generar en la respuesta.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "max_tokens": 100
 5. top_p
-Usa muestreo de n˙cleo, donde el modelo considera los resultados de los tokens con una probabilidad de masa acumulativa top_p. Por ejemplo, 0.1 significa que solo se consideran los tokens que comprenden el 10% de probabilidad m·s alta.
+Usa muestreo de n√∫cleo, donde el modelo considera los resultados de los tokens con una probabilidad de masa acumulativa top_p. Por ejemplo, 0.1 significa que solo se consideran los tokens que comprenden el 10% de probabilidad m√°s alta.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "top_p": 0.9
 6. n
-N˙mero de respuestas a generar para cada entrada.
+N√∫mero de respuestas a generar para cada entrada.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "n": 1
 7. stream
-Si est· establecido en true, el modelo enviar· datos de forma incremental a medida que se generan tokens.
+Si est√° establecido en true, el modelo enviar√° datos de forma incremental a medida que se generan tokens.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "stream": false
 8. stop
-Una secuencia o una lista de secuencias donde el modelo deberÌa detenerse.
+Una secuencia o una lista de secuencias donde el modelo deber√≠a detenerse.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "stop": ["\n", "Human:"]
 9. presence_penalty
-Un n˙mero entre -2.0 y 2.0. Valores positivos aumentan la probabilidad de que el modelo hable de nuevos temas.
+Un n√∫mero entre -2.0 y 2.0. Valores positivos aumentan la probabilidad de que el modelo hable de nuevos temas.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "presence_penalty": 0.0
 10. frequency_penalty
-Un n˙mero entre -2.0 y 2.0. Valores positivos disminuyen la probabilidad de que el modelo repita la misma lÌnea palabra por palabra.
+Un n√∫mero entre -2.0 y 2.0. Valores positivos disminuyen la probabilidad de que el modelo repita la misma l√≠nea palabra por palabra.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "frequency_penalty": 0.0
 11. logit_bias
-Un mapa de ajustes de sesgo de logit para tokens especÌficos. Esto puede hacer que el modelo sea m·s o menos propenso a ciertos resultados.
+Un mapa de ajustes de sesgo de logit para tokens espec√≠ficos. Esto puede hacer que el modelo sea m√°s o menos propenso a ciertos resultados.
 
 Ejemplo:
 json
-Copiar cÛdigo
+Copiar c√≥digo
 "logit_bias": {"50256": -100}
         * 
 
