@@ -1,0 +1,29 @@
+##  1-preparar datos
+C:\Users\GA506\PycharmProjects\TFG2-FINETUNING\venv\Scripts\python.exe C:\Users\GA506\PycharmProjects\TFG2-FINETUNING\fine_tuning_create.py
+sk-proj-5YeeM1lOBNSYqCmm2iaKT3BlbkFJHb4KONZFHLPGcCauACoY
+Num de ejemplos sin el system message: 0
+Num de ejemplos sin el user message: 0
+
+#### Distribución de num_mensajes_por_ejemplo:
+min / max: 3, 3
+media / mediana: 3.0, 3.0
+p5 / p95: 3.0, 3.0
+
+#### Distribución de num_total_tokens_por_ejemplo:
+min / max: 93, 120
+media / mediana: 102.94, 103.0
+p5 / p95: 95.9, 111.1
+
+#### Distribución de num_assistant_tokens_por_ejemplo:
+min / max: 11, 35
+media / mediana: 21.88, 22.0
+p5 / p95: 14.0, 29.1
+
+0 ejemplos que excedan el límite de tokenes de 4096, ellos serán truncados durante el fine-tuning
+El conjunto de datos tiene ~5147 tokens que serán cargados durante el entrenamiento
+Por defecto, entrenarás para 4 epochs en este conjunto de datos
+Por defecto, serás cargado con ~20588 tokens
+Revisa la página para estimar el costo total
+
+Process finished with exit code 0
+##  2- Subir archivos a la BD DE OPENAI

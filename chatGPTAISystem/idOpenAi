@@ -1,0 +1,24 @@
+file-koBjdadV0yTl9aw2p7I4lz2L
+
+FineTuningJob(id='ftjob-A2CiVQvvTou6p9vh0QDxoLQr',
+created_at=1723720679,
+ error=Error(code=None, message=None, param=None),
+ fine_tuned_model=None,
+  finished_at=None,
+  hyperparameters=Hyperparameters(n_epochs=4, batch_size='auto', learning_rate_multiplier='auto'),
+   model='gpt-3.5-turbo-0125',
+   object='fine_tuning.job',
+    organization_id='org-A5OryrpGzBB9lMUDhShgtYEY',
+    result_files=[],
+     seed=1313127073,
+     status='validating_files',
+      trained_tokens=None,
+       training_file='file-koBjdadV0yTl9aw2p7I4lz2L',
+       validation_file=None, estimated_finish=None, integrations=[], user_provided_suffix='NPC_SELFISH')
+
+
+SWEETY:
+ id: file-KQVUtlGaknkX2vKNil0pvv0t
+ FineTuningJob(id='ftjob-Dr9G25pDZ9hEg67qnALAOVZL', created_at=1724172959, error=Error(code=None, message=None, param=None), fine_tuned_model=None, finished_at=None, hyperparameters=Hyperparameters(n_epochs=4, batch_size='auto', learning_rate_multiplier='auto'), model='gpt-3.5-turbo-0125', object='fine_tuning.job', organization_id='org-A5OryrpGzBB9lMUDhShgtYEY', result_files=[], seed=519529050, status='validating_files', trained_tokens=None, training_file='file-KQVUtlGaknkX2vKNil0pvv0t', validation_file=None, estimated_finish=None, integrations=[], user_provided_suffix='NPC_SWEETY')
+
+
